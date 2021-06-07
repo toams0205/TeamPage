@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>모두의 중부</title>
+	<link href="./img/모두의 중부 아이콘.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="./css/TeamMain.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/button1.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="./js/scrolloverflow.js"></script>
+
+	<script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#9c1c2b', '#000000', '#999999', '#252525'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				menu: '#menu'
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="footer">
+		copyright by fullpage.js
+	</div>
+	<ul id="menu">
+		<li data-menuanchor="firstPage"><a href="#firstPage">홈</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">서비스안내</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">기술설명</a></li>
+		<li data-menuanchor="4thpage"><a href="#4thpage">팀원소개</a></li>
+	</ul>
+<div id="fullpage">
+	<div class="section active" id="section0">
+		<div class="slide">
+			<section>
+				<video id="video" data-autoplay muted loop preload="auto" width="100%" height="100%">
+					<source src="./img/학교메인영상.mp4" type="video/mp4">
+				</video>
+				<div class="textbox">
+					<h1 style="padding-bottom: 100px; padding-left: 50px;"><strong>모두의 중부</strong></h1>
+					<p style="padding-left: 50px;">
+						중부대 학생들을 위해 유용한 정보들을 준비했습니다<br>
+						시설소개, 대학생활, 자취꿀팁, 먹거리들을 준비했습니다
+					</p>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<div class="slide" style="background: url(./img/joongbu.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;" id="backgroundSlide1">
+			<div class="intro">
+				<h1>중부대학교 교내 탐방</h1>
+				<h2>정보보호학과 실습실, 강의실, 휴게실, 사무실</h2><br>
+				<p>
+				코로나19로 인해 제대로 된 학교생활을 경험해보지 못한 20, 21학번들을 비롯해 중부대학교 재학생분들에게 휴게시설등의 정보를 드리고자 합니다.
+				</p>
+				<button class="button"><a href="./schoolinfo.html"><span> 자세히 보러가기 </span></a></button>
+			</div>
+		</div>
+		<div class="slide" style="background: url(./img/univ.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;" id="backgroundSlide2">
+			<div class="intro">
+				<h1>대학생활</h1>
+				<h2>대학생이 알아두면 도움될 정보</h2><br>
+				<p>
+					대학생활중에 유용하게 활용될 자격증 관련 정보들과<br>
+					청년복지에 대한 내용을 담았습니다
+				</p>
+				<button class="button"><a href="./doori.html"><span> 자세히 보러가기 </span></a></button>
+			</div>
+		</div>
+		<div class="slide" style="background: url(./img/room.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;" id="backgroundSlide3">
+			<div class="intro">
+				<h1>자취정보</h1>
+				<h2>중부대학생이 자취할때에 도움이 되어줄 정보들</h2><br>
+				<p style="font-size: 1.5em;">
+					지도 API를 이용해 셔틀과 버스를 이용하기 편한곳을 알려드립니다<br>
+					자취하면서 도움될 요리와 맛집을 알려드립니다
+				</p>
+				<button class="button"><a href="./persnal.html"><span> 자세히 보러가기 </span></a></button>
+			</div>
+		</div>
+		<div class="slide" style="background: url(./img/play.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;" id="slide4">
+			<div class="intro">
+				<h1>놀거리 소개</h1>
+				<h2>학교 근처 놀만한곳을 찾는다면</h2><br>
+				<p>
+					학교 생활을 하며 공강 및 수업 후에 스트레스 풀며<br>
+					놀기 좋은 맛집과 놀거리를 소개합니다.
+				</p>
+				<button class="button"><a href="./Dionysus.html"><span> 자세히 보러가기 </span></a></button>
+			</div>
+		</div>
+	</div>
+
+	<div class="section" id="section2">
+		<div class="slide active">
+			<section>
+				<video id="video" data-autoplay muted loop preload="auto" width="100%" height="100%">
+					<source src="./img/코딩영상.mp4" type="video/mp4">
+				</video>
+				<div class="textbox">
+					<h1 style="padding-bottom: 130px; padding-left: 100px; color: azure;"><strong>사용 기술</strong></h1>
+					<p style="padding-left: 100px;">
+						· jQuery<br>
+						· fullPage.js<br>
+						· CDN
+					</p>
+				</div>
+			</section>
+		</div>
+		<div class="slide" style="background:#233e8b;">
+			<h1>jQuery</h1> <br><br>
+			<img src="./img/jquery.png" alt="jquery"><br>
+			<a href="https://jquery.com/" class="btn7" target="_blank">
+				<i class="bi bi-house-door-fill" style="font-size: 1rem;"></i>
+				Home
+			</a>
+			<p>jQuery는 HTML의 클라이언트 사이드 조작을 단순화 하도록 설계된<br>
+				크로스 플랫폼의 자바스트립트 라이브러리 이다.
+			</p>
+		</div>
+		<div class="slide" style="background: #1eae98;">
+			<h1>fullPage.js</h1><br><br>
+			<img src="./img/fullpage.png" alt="fullPage">
+			<img src="./img/fullpage.gif" alt="fullpage gif" width="30%" height="30%"> <br>
+			<a href="https://alvarotrigo.com/fullPage/ko/" class="btn7" target="_blank">
+				<i class="bi bi-house-door-fill" style="font-size: 1rem;"></i>Home</a>
+			<a href="https://github.com/alvarotrigo/fullPage.js/tree/master/lang/korean" class="btn7" target="_blank">
+				<i class="bi bi-github" style="font-size: 1rem;"></i>
+				Manual
+			</a>
+			<p>전체화면 스크롤 웹페이지를 만드는데 있어 도움을 주는 라이브러리이며, <br>
+				반응형 웹을 지원하고 사용자 설정대로 편집하기에 쉽게 만들어진 라이브러리 이다. </p>
+		</div>
+		<div class="slide" style="background: #a9f1df;">
+			<h1 style="font-size: 4em;">CDN <br>(Contents Delivery Network)</h1> <br>
+			<img src="./img/CDN.png" alt="fullPage" width="500px" height="300px"> <br>
+			<a href="https://goddaehee.tistory.com/173" class="btn7" target="_blank">
+				<i class="bi bi-info-square" style="font-size: 1rem;"></i>
+				Info
+			</a>
+			<p>콘텐츠를 효율적으로 전달하기 위해 여러 노드를 가진 네트워크에 데이터를 저장해 제공하는 시스템이다.</p>
+			<p>현재 인터넷에 사용되는 대부분의 콘텐츠에 사용되고있으며, 콘텐츠 병목현상을 막아준다.</p>
+		</div>
+	</div>
+
+	<div class="section" style="background: url(./img/team.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;" id="section3">
+		<h1 style="padding-bottom: 50px; color: #252525;">팀원 소개</h1>
+		<div class="sect">
+			<div class="card">
+				<div class="screen">
+					<div class="top">박주형</div>
+					<div class="bottom">18학번 91812385</div>
+					<img src="./img/모짜렐라.jpg" alt="박주형" style="width:100%">
+				</div>
+				<h1>박주형</h1>
+				<p class="title">팀장</p>
+				<p class="about" style="font-size: 15px;">
+					자취에 대한 정보들을<br>
+					준비했습니다<br>
+					취미 : 요리 <br>
+					관심분야 : Python
+				</p>
+				<div style="margin: 24px 0;">
+					<a href="https://www.instagram.com/jh990205/" class="sns"><i class="fa fa-instagram" target="_blank"></i></a> 
+				</div>
+				<p><button><a href="https://practical-goldwasser-d37850.netlify.app" target="_blank" style="color: azure;">Contact</a></button></p>
+			</div>
+			<div class="card">
+				<div class="screen">
+					<div class="top">신하린</div>
+					<div class="bottom">21살, 20학번</div>
+					<img src="./img/강아지.png" alt="신하린" style="width:100%">
+				</div>
+				<h1>신하린</h1>
+				<p class="title">팀원</p>
+				<p class="about" style="font-size: 15px;">
+					교내 휴게시설과 학과<br>
+					실습실 소개를 다룹니다.<br>
+					취미 : 음악듣기 <br>
+					관심분야 : 네트워크</p>
+				<div style="margin: 24px 0;">
+					<a href="https://www.instagram.com/shin_gkfls" class="sns" target="_blank"><i class="fa fa-instagram"></i></a>  
+				</div>
+				<p><button><a href="https://harini127.netlify.app"  target="_blank" style="color: azure;">Contact</a></button></p>
+			</div>
+			<div class="card">
+				<div class="screen">
+					<div class="top">이두리</div>
+					<div class="bottom">23살, 18학번</div>
+					<img src="./img/두리.jpg" alt="이두리" style="width:100%">
+				</div>	
+				<h1>이두리</h1>
+				<p class="title">팀원</p>
+				<p class="about" style="font-size: 15px;">
+					대학 생활에 유용한 <br>
+					정보를 다룹니다. <br>
+					취미 : 맛집탐방 <br>
+					관심분야 : 컴퓨터활용능력</p>
+				<div style="margin: 24px 0;">
+					<a href="https://www.instagram.com/doolydoori/" class="sns" target="_blank"><i class="fa fa-instagram"></i></a>  
+				</div>
+				<p><button><a href="https://dreamy-spence-fc63b2.netlify.app/" target="_blank" style="color: azure;">Contact</a></button></p>
+			</div>
+
+		<div class="card">
+			<div class="screen">
+				<div class="top">최용준</div>
+				<div class="bottom">23살, 18학번</div>
+				<img src="./img/최용준 프사.jpg" alt="최용준" style="width:100%">
+			</div>	
+			<h1>최용준</h1>
+			<p class="title">팀원</p>
+			<p class="about" style="font-size: 15px;">
+				학교 근처 먹거리,놀거리 <br>
+				정보를 다룹니다. <br>
+				취미 : 사진 <br>
+				관심분야 : css html js python</p>
+			<div style="margin: 24px 0;">
+				<a href="https://www.instagram.com/linzler86/" class="sns" target="_blank"><i class="fa fa-instagram"></i></a> 
+				<a href="https://www.facebook.com/linzler86/" class="sns" target="_blank"><i class="fa fa-facebook"></i></a>  
+			</div>
+			<p><button><a href="https://finalcoding.netlify.app/" target="_blank" style="color: azure;">Contact</a></button></p>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

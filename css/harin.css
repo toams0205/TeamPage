@@ -1,0 +1,459 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  
+}
+
+h1, h2, h3, p{
+  font-family: 'Song Myung', serif;
+}
+
+#snb{
+  position: fixed;
+  right:0;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+#snb a{
+  display: block;
+  width:40px; 
+  height:25px;
+  background:yellow;
+  margin:20px;
+}
+
+
+section{
+  position: relative;
+  width:100%;
+  height:100vh;
+  /* padding:100px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  text-align: center;
+}
+
+.section .intro_h{
+  position:relative;
+  z-index: 5;
+  max-width: 100%;
+    height: auto;
+  margin: 0 auto;
+    padding:20px;
+    background:rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  text-align: left;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+  margin-top: 500px;
+}
+
+.section .intro_h hr{
+  width:500px;
+  font-weight: 700;
+  color: red;
+}
+
+.section .intro_h h1{
+  font-size: 3.5em;
+  font-weight: 600;
+}
+
+.section .intro_h p{
+  font-size: 1.5em;
+  color:#333;
+}
+
+#section0{
+    background: url(../imgs_harin/jb.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* 휴게공간_ 스타벅스 컨셉 */
+.content_st{
+  position:relative;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.content_st>.textBox_st{
+  position:relative;
+  max-width: 1000px;
+  padding-right: 110px;
+  padding-bottom: 130px;
+}
+
+.content_st .textBox_st h2{
+  color:#333;
+  font-size: 4em;
+  line-height: 1.4em;
+  font-weight: 500;
+  width:750px;
+  height:270px;
+}
+
+.content_st .textBox_st h2 span{
+  color:#37b182;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+.content_st .textBox_st p{
+  color:#333;
+  margin-bottom: 80px;
+}
+
+.content_st .imgBox_st{
+  width:600px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+
+.content_st .imgBox_st img{
+  max-width: 500px;
+  margin-right: 150px;
+  margin-bottom: 150px;
+}
+
+.thumb{
+  position: absolute;
+  left:50%;
+  bottom:20px;
+  transform: translateX(-50%);
+  display: flex;
+  padding-right: 0;
+  width:200px;
+}
+
+.thumb li{
+  list-style: none;
+  display: inline-block;
+  margin:0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.thumb li:hover{
+  transform: translateY(-15px);
+}
+
+.thumb li img{
+  max-width: 80px;
+
+}
+
+.sci{
+  position: absolute;
+  top:50%;
+  right:30px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sci li{
+  list-style: none;
+  padding-left: 300px;
+}
+
+.sci li a{
+  display: inline-block;
+  margin: 5px 0;
+  transform: scale(0.6);
+  filter: invert(1);
+}
+
+.sci li img{
+  width:45px;
+  height: 45px;
+}
+
+.circle{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: #017143;
+  clip-path: circle(600px at right 800px);
+}
+
+
+/* Video_강의실 영상 */
+
+
+#section2{
+  position: relative;
+  width:100%;
+  height:100vh;
+}
+
+
+
+section > video{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+section > .navigation0{
+  position: absolute;
+  bottom:50px;
+  left:50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section > .navigation0 li{
+  list-style: none;
+  cursor: pointer;
+  margin:0 30px;
+  border-radius: 4px;
+  background: #fff;
+  padding:3px 3px 0;
+  opacity: 0.7;
+  transition: 0.5s;
+  width:170px;
+}
+
+section > .navigation0 li:hover{
+  opacity: 1;
+  width:220px;
+}
+
+section > .navigation0 li img{
+  width:150px;
+  transition: 0.5s;
+}
+
+section > .navigation0 li img:hover{
+  width:200px;
+}
+
+.test p{
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+}
+
+/* Card_교수님 */
+
+.gallerylist{
+  max-width: 3000px;
+  width:100%;
+  margin:0 auto;
+  background: #333;
+}
+
+.gallerylist ul{
+  font-size: 0;
+}
+
+.gallerylist ul > li{
+  display: inline-block;
+  vertical-align: top;
+  /* 세로정렬 상단 */
+  width:400px;
+  
+}
+
+.gallerylist ul > li > a{
+  display: block;
+  width:auto;
+  text-align: none;
+  margin:25px;
+}
+
+.gallerylist ul > li > a .screen{
+  position:relative;
+  overflow: hidden;
+}
+
+.gallerylist ul > li > a .screen::after{
+  /* 형광펜 요소 */
+  content:'';
+  display: block;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  opacity: 0;
+  transition: all .35s;
+}
+
+.gallerylist ul > li > a:hover .screen::after{
+  opacity: 1;
+}
+
+.gallerylist ul > li > a .screen .top{
+  position: absolute;
+  bottom: 150%;
+  left:30px;
+  z-index: 2;
+  color:#fff;
+  font-size: 30px;
+  font-weight:700;
+  /* 폰트 두께 */
+  font-family: 'Jua', sans-serif;
+  transition:all .35s;
+}
+
+.gallerylist ul > li > a .screen .bottom{
+  position:absolute;
+  top:140%;
+  left:30px;
+  z-index: 2;
+  color:#fff;
+  font-size: 18px;
+  transition:all .35s;
+  font-family: 'Sunflower', sans-serif;
+}
+
+.gallerylist ul > li > a .screen img{
+  width:350px;
+  height: 240px;
+}
+
+.gallerylist ul > li > a h3{
+  font-size: 25px;
+  text-align: center;
+  padding:5px;
+  color:#666;
+}
+
+
+.gallerylist ul > li > a:hover .top{
+  bottom:52%;
+}
+
+.gallerylist ul > li > a:hover .bottom{
+  top:52%;
+}
+
+
+/* 휴게시설 슬라이드 */
+
+.space{
+  position:relative;
+  z-index: 5;
+  max-width: 100%;
+    height: 200px;
+    padding:15px;
+    background:rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0;
+}
+
+.space h1{
+  font-size: 28pt;
+  font-weight: 500;
+  padding-top: 30px;
+}
+
+.space p{
+  font-size: 19pt;
+  color:#333;
+}
+
+.space hr{
+  width:300px;
+  font-weight: 300;
+}
+
+#slide1_h{
+    background: url(../imgs_harin/library2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
+}
+#slide2_h{
+    background: url(../imgs_harin/study1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#slide3_h{
+    background: url(../imgs_harin/study2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#slide4_h{
+    background: url(../imgs_harin/ground.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#slide5_h{
+    background: url(../imgs_harin/cafe1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#slide6_h{
+    background: url(../imgs_harin/cafe2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#slide7_h{
+    background: url(../imgs_harin/4rd1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#slide8_h{
+    background: url(../imgs_harin/4rd2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#slide9_h{
+    background: url(../imgs_harin/3rd1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#slide10_h{
+    background: url(../imgs_harin/3rd2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#slide11_h{
+    background: url(../imgs_harin/mart.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#slide12_h{
+    background: url(../imgs_harin/mart2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

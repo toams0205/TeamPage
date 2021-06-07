@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>모두의 중부</title>
+	<link href="./img/모두의 중부 아이콘.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css">
+	<link rel="stylesheet" type="text/css" href="./css/TeamMain.css">
+	<link rel="stylesheet" type="text/css" href="./css/persnal.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e2f453c12ee3314c54c5bb8120f6154f"></script>
+
+	<script type="text/javascript" src="./js/scrolloverflow.js"></script>
+	<script type="text/javascript" src="./js/izakaya.js"></script>
+	<script type="text/javascript" src="./js/bamgasi.js"></script>
+	<script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#9c1c2b', '#000000', '#000000', '#000000'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				menu: '#menu'
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="footer">
+		copyright by fullpage.js kakao API
+	</div>
+	<ul id="menu">
+		<li data-menuanchor="firstPage"><a href="#firstPage">홈</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">자취</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">요리</a></li>
+		<li data-menuanchor="4thpage"><a href="#4thpage">맛집</a></li>
+		<li data-menuanchor="lastPage"><a href="./TeamMain.html">메인</a></li>
+	</ul>
+<div id="fullpage">
+	<div class="section active" id="section0">
+		<div class="slide">
+			<section>
+				<video id="video" data-autoplay muted loop preload="auto" width="100%" height="100%">
+					<source src="./img/바쁜서울.mp4" type="video/mp4">
+				</video>
+				<div class="textbox">
+					<h1 style="padding-bottom: 100px; padding-left: 50px;">자취꿀팁</h1>
+					<p style="padding-left: 50px;">
+						셔틀과 버스를 고려해 삼송역과 백석역으로 준비했습니다<br>
+						자취하면서 도움될 요리와 맛집을 준비했습니다
+					</p>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<div class="slide active">
+			<div>
+				<h1 style="padding-bottom: 100px; font-size: 8em;">자취방</h1>
+				<p style="font-size: 4em;">
+				<span style="color: azure;">삼송과 백석에는 어떤 방이 있을까?</span><br>
+                (직방의 데이터를 기반으로 제작)<br>
+				(우선순위는 셔틀버스)
+				</p>
+			</div>
+		</div>
+		<div class="slide">
+			<div>
+				<h1 style="padding-bottom: 100px; font-size: 8em;">삼송</h1>
+                <h2 style="font-size: 3em; padding-bottom: 30px;">
+                    삼송역 근처에는 어떤 방이 있을까?
+                </h2>
+				<div style="align-content: center;">
+					<a href="https://map.kakao.com/?urlX=476985&urlY=1153760&urlLevel=2&map_type=TYPE_MAP&map_hybrid=false" target="_blank">
+						<img width="504" height="310" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=1.25&MX=476985&MY=1153760&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc">
+					</a>
+				</div>
+			</div>
+		</div>
+        <div class="slide">
+            <h1 style="padding-bottom: 50px; font-size: 8em;">삼송역 근처</h1>
+            <div class="kakaomap" style="width: 1400px; height: 600px; margin:auto; padding:auto;">
+                <div id="samsong" style="width:600px; height: 550px; margin-left: 150px;"></div>
+				<button><a href="https://www.zigbang.com/home/oneroom/items/27305337" target="_blank" style="color: azure;">방보러가기</button>
+                <p class="textmap">
+                    보증금 : 500 월세 : 35<br>
+					평수 : 10평<br>
+					옵션정보 : 에어컨 가스레인지 싱크대<br>
+					관리비 : 1만원(전기, 가스, 수도, 인터넷, 티비 별도)<br>
+					장점 : 삼송역과 셔틀버스 승차장의 거리는<br>
+					 각각 걸어서 10분 15분거리<br>
+					단점 : 내부시설은 구형이고 조금 낙후된 면이<br>
+					없지않아 있지만 거리가 가깝고 주택가<br>
+					적은 월세로 메리트가 있음<br>
+					버스타고 20분 거리 스타필드 고양점 이용가능<br>
+					<a href="https://www.zigbang.com/home/oneroom/items/27305337" target="_blank">방보러가기</a>
+                </p>
+            </div>
+        </div>
+		<div class="slide">
+			<div>
+				<h1 style="padding-bottom: 100px; font-size: 8em;">백석</h1>
+				<h2 style="font-size: 3em; padding-bottom: 30px;">
+                    백석역 근처에는 어떤 방이 있을까?
+                </h2>
+                <a href="https://map.kakao.com/?urlX=453252&urlY=1150980&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false" target="_blank">
+					<img width="504" height="310" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=453252&MY=1150980&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc">
+				</a>
+			</div>
+		</div>
+        <div class="slide">
+            <h1 style="padding-bottom: 80px; font-size: 8em;">백석역 근처</h1>
+            <div class="kakaomap" style="width: 1400px; height: 600px; margin:auto; padding:auto;">
+                <div id="bacseock" style="width:600px; height: 550px; margin-left: 150px;"></div>
+                <p class="textmap" style="font-size: 1.8em; left: 480px; bottom: 600px;">
+                    1. 보증금 : 500 월세 : 35 평수 : 6평 2층<br>
+					관리비 : 1만원(전기, 가스, 수도, 인터넷, 티비 별도)<br>
+					옵션 : 에어컨 냉장고 세탁기 인덕션 신발장 싱크대 애완동물X<br>
+                    <span style="color: rgb(255, 242, 227);">
+						2. 보증금 : 500 월세 : 40 평수 : 11평 반지하<br>
+                    	관리비 : 1만원(전기, 가스, 수도, 인터넷, 티비 별도)<br>
+						옵션 : 에어컨 냉장고 세탁기 가스레인지 옷장 신발장 싱크대<br>
+					</span>
+                    <span style="color: rgb(248, 231, 211);">
+						3. 보증금 : 200 월세 : 35 평수 : 7평 1층<br>
+                    	관리비 : 1만원(전기, 가스, 수도, 인터넷, 티비 별도)<br>
+						옵션 : 에어컨 냉장고 세탁기 가스레인지 신발장 싱크대<br>
+					</span>
+                    <span style="color: bisque;">
+						4. 보증금 : 500 월세 : 40 평수 : 7평 1층<br>
+                   		관리비 : 1만원(전기, 가스, 수도, 인터넷, 티비 별도)<br>
+						옵션 : 에어컨 냉장고 세탁기 가스레인지 신발장 싱크대 애완동물X<br>
+					
+					</span>
+                    <span style="color: rgb(248, 212, 168);">
+						5. 보증금 : 1000 월세 : 40 평수 : 12평 10층<br>
+                    	관리비 : 8만원(가스, 인터넷, 티비 별도)<br>
+						옵션 : 에어컨 냉장고 세탁기 가스레인지 옷장 신발장 싱크대<br>
+						백석역 5분 단층 오피스텔<br>
+					</span>
+                    <span style="color: rgb(253, 209, 155);">
+						2. 보증금 : 500 월세 : 40 평수 : 11평 반지하<br>
+                    	관리비 : 1만원(전기, 가스, 수도, 인터넷, 티비 별도)<br>
+						옵션 : 에어컨 냉장고 세탁기 가스레인지 옷장 신발장 싱크대
+					</span><br>
+					<a href="https://www.zigbang.com/home/oneroom/map" target="_blank">방보러가기</a>
+                </p>
+            </div>
+        </div>
+	</div>
+
+	<div class="section" id="section2">
+		<div class="slide active">
+			<section>
+				<video id="video" data-autoplay muted loop preload="auto" width="100%" height="100%">
+					<source src="./img/요리영상.mp4" type="video/mp4">
+				</video>
+				<div class="textbox">
+					<h1 style="padding-bottom: 100px; padding-left: 100px; color: azure;"><strong>요리</strong></h1>
+					<p style="padding-left: 100px;">
+						자취하면서 할만한 간단한 요리
+					</p>
+				</div>
+			</section>
+		</div>
+		<div class="slide">
+			<section>
+				<img src="./img/gambas.png" alt="gambas" style="float:left; margin-left: 150px; max-width:100%; height:auto;">
+				<section class="textbox" style="position: relative; left: 100px; display: block; text-align: left; max-width:100%; height:auto;">
+					<h1 style=" color: azure; padding-bottom: 50px;">감바스</h1>
+					<p style="color: azure; max-width:100%; height:auto;">
+					필수재료 : 새우 7마리, 마늘 7알, 다진마늘, <br>
+					후추, 올리브유, 페페론치노, 바게트<br>
+					추가재료 : 방울토마토, 바질(허브), <br>
+					치킨스톡, 파슬리, 스파게티 면<br><br>
+                    1. 머리와 내장을 손질한 새우에 소금과 후추로 밑간<br>
+					2. 올리브유 2컵(종이컵)과 편썰기한 마늘7알, <br>
+					다진마늘 2숟갈, 페페론치노를 넣고 중불에 조리<br>
+					3. 기포가 올라오고 마늘이 노릇노릇해지면 <br>
+					새우와 각종 재료(허브) 넣기<br>
+					4. 새우가 익어갈때 남은 재료(야채)를 넣고 <br>
+					소금과 후추(치킨스톡 등)을 넣기<br>
+					5. 한소끔 끓이면 끝!<br><br>
+					</p>
+				</section>
+			</section>
+		</div>
+		<div class="slide">
+			<section>
+				<img src="./img/goldfrying.png" alt="gambas" style="float:left; margin-left: 150px; max-width:100%; height:auto;">
+				<section class="textbox" style="position: relative; left: 80px; display: block; text-align: left; max-width:100%; height:auto;">
+					<h1 style=" color: azure; padding-bottom: 50px;">황금볶음밥</h1>
+					<p style="color: azure; max-width:100%; height:auto;">
+						필수재료 : 계란 2알, 햇반, 파, 식용유, 소금, 후추<br>
+						추가재료 : 굴소스, 간장, 쪽파<br><br>
+						1. 볼에 계란2개(노른자)를 풀고<br>
+						햇반을 그냥 넣기(전자레인지X)<br>
+						2. 소금 한 꼬집과 식용유,<br>
+						후추를 넣어 잘 섞어주기<br>
+						3. 팬에 식용유를 두른 뒤<br>
+						대파를 넣어 파기름 만들기<br>
+						4. 미리 조미한 밥을 넣고<br>
+						뭉친곳 없이 골고루 볶으면 끝!<br><br>
+						취향에 따라 간장과 굴소스,<br>
+						쪽파를 넣어주면 더욱 맛있다!!!
+					</p>
+				</section>
+			</section>
+		</div>
+	</div>
+
+	<div class="section" id="section3">
+		<div class="slide active">
+			<h1 style="padding-bottom: 100px;">맛집</h1>
+			<p style="color: azure;">
+				고양시 부담없이 가볼만한 맛집 추천
+			</p>
+		</div>
+		<div class="slide">
+			<h1 style="padding-bottom: 100px;">백석 사이야이자카야</h1>
+			<div id="izakayamap" style="width: 550px; height: 600px; position: relative; left: 100px;"></div>
+			<section>
+				<img src="./img/사이야메뉴판.jpg" alt="izakayaMenu" style="width: 40%; height: 40%; position: relative; left: 400px; bottom: 600px; max-width:100%; height:auto;">
+				<p style="color: azure; text-align: left; float: right; position: relative; right: 550px; bottom: 150px;">
+				백석 사이야이자카야<br>
+				사케와 일식을 함께 즐길 수 있는 식당<br>
+				오뎅과 계란말이가 정말 맛있습니다!!
+				</p>
+			</section>
+		</div>
+		<div class="slide">
+			<h1 style="padding-bottom: 100px;">정발산 밤가시버거</h1>
+			<div id="bamgasi" style="width: 550px; height: 600px; position: relative; left: 100px;"></div>
+			<section>
+				<img src="./img/밤가시버거버거.jpg" alt="bamgasi" style="position: relative; left: 400px; bottom: 600px; max-width:100%; height:auto;">
+				<p style="color: azure; text-align: left; float: right; position: relative; right: 450px; bottom: 150px;">
+				정발산 밤가시버거<br>
+				수제버거 전문점으로 밤리단길 최고의 식당<br>
+				소고기 패티와 신선한 야채,<br>
+                맛있는 소스로 호불호가 없습니다
+				</p>
+			</section>
+		</div>
+	</div>
+</div>
+<script>
+	var mapContainer = document.getElementById('izakayamap'), // 지도를 표시할 div
+   	mapOption = { 
+        center: new kakao.maps.LatLng(37.645758, 126.787856), // 지도의 중심좌표
+        level: 1 // 지도의 확대 레벨
+    };
+var izakayamap = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+	// 마커가 표시될 위치입니다
+var markerPosition  = new kakao.maps.LatLng(37.645758, 126.787856); 
+	// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+	position: markerPosition
+});
+	// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(izakayamap);
+</script>
+<script>
+	var mapContainer = document.getElementById('bamgasi'), // 지도를 표시할 div
+ 	mapOption = { 
+        center: new kakao.maps.LatLng(37.669159, 126.784638), // 지도의 중심좌표
+        level: 1 // 지도의 확대 레벨
+    };
+var bamgasi = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+	// 마커가 표시될 위치입니다
+var markerPosition  = new kakao.maps.LatLng(37.669159, 126.784638); 
+	// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+	position: markerPosition
+});
+	// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(bamgasi);
+</script>
+<script> //삼송
+    var mapContainer = document.getElementById('samsong'), // 지도를 표시할 div  
+        mapOption = { 
+            center: new kakao.maps.LatLng(37.653222, 126.891621), // 지도의 중심좌표
+            level: 4 // 지도의 확대 레벨
+        };
+    
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+     
+    // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
+    var positions = [
+        {
+            content: '<div>삼송역</div>', 
+        latlng: new kakao.maps.LatLng(37.653119, 126.895409)
+    },
+    {
+        content: '<div>500/35</div>', 
+        latlng: new kakao.maps.LatLng(37.653982, 126.888417)
+    },
+    {
+        content: '<div>셔틀버스</div>', 
+        latlng: new kakao.maps.LatLng(37.654815, 126.897964)
+    }
+    ];
+    
+    for (var i = 0; i < positions.length; i ++) {
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            map: map, // 마커를 표시할 지도
+            position: positions[i].latlng // 마커의 위치
+        });
+    
+        // 마커에 표시할 인포윈도우를 생성합니다 
+        var infowindow = new kakao.maps.InfoWindow({
+            content: positions[i].content // 인포윈도우에 표시할 내용
+        });
+    
+        // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+        // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+        // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+        kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+        kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+    }
+    
+    // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+    function makeOverListener(map, marker, infowindow) {
+        return function() {
+            infowindow.open(map, marker);
+        };
+    }
+    
+    // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+    function makeOutListener(infowindow) {
+        return function() {
+            infowindow.close();
+        };
+    }
+    </script>
+        <script> //백석
+            var mapContainer = document.getElementById('bacseock'), // 지도를 표시할 div  
+                mapOption = { 
+                    center: new kakao.maps.LatLng(37.645082, 126.790051), // 지도의 중심좌표
+                    level: 5 // 지도의 확대 레벨
+                };
+            
+            var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+             
+            // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
+            var positions = [
+                {
+                    content: '<div>백석역</div>',
+                latlng: new kakao.maps.LatLng(37.643051, 126.787948)
+            },
+            {
+                content: '<div>1. 500/35</div>',
+                latlng: new kakao.maps.LatLng(37.648314, 126.789105)
+            },
+            {
+                content: '<div>2. 500/40</div>',
+                latlng: new kakao.maps.LatLng(37.648410, 126.790193)
+            },
+            {
+                content: '<div>3. 200/35</div>',
+                latlng: new kakao.maps.LatLng(37.648602, 126.790656)
+            },
+            {
+                content: '<div>4. 500/40</div>',
+                latlng: new kakao.maps.LatLng(37.645815, 126.788904)
+            },
+            {
+                content: '<div>5. 1000/40</div>',
+                latlng: new kakao.maps.LatLng(37.641018, 126.789987)
+            },
+            {
+                content: '<div>셔틀버스</div>',
+                latlng: new kakao.maps.LatLng(37.643109, 126.788299)
+            }
+            ];
+            
+            for (var i = 0; i < positions.length; i ++) {
+                // 마커를 생성합니다
+                var marker = new kakao.maps.Marker({
+                    map: map, // 마커를 표시할 지도
+                    position: positions[i].latlng // 마커의 위치
+                });
+            
+                // 마커에 표시할 인포윈도우를 생성합니다 
+                var infowindow = new kakao.maps.InfoWindow({
+                    content: positions[i].content // 인포윈도우에 표시할 내용
+                });
+            
+                // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+                // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+                // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+                kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+                kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+            }
+            
+            // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+            function makeOverListener(map, marker, infowindow) {
+                return function() {
+                    infowindow.open(map, marker);
+                };
+            }
+            
+            // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+            function makeOutListener(infowindow) {
+                return function() {
+                    infowindow.close();
+                };
+            }
+            </script>
+</body>
+</html>

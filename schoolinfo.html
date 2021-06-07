@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>모두의 중부</title>
+  <link href="./img/모두의 중부 아이콘.png" rel="shortcut icon" type="image/x-icon">
+  <meta name="author" content="Alvaro Trigo Lopez" />
+  <meta name="description" content="fullPage very simple demo." />
+  <meta name="keywords" content="fullpage,jquery,demo,simple" />
+  <meta name="Resource-type" content="Document" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="./css/harin2.css" />
+  <link rel="stylesheet" type="text/css" href="./css/harin.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="./js/scrolloverflow.js"></script>
+  <script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+  <script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#9c1c2b', '#000000', '#000000', '#000000'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thPage', 'lastPage'],
+				menu: '#menu'
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+  <div id="footer">
+		copyright by fullpage.js
+  </div>
+  <ul id="menu">
+    <li data-menuanchor="firstPage" class="top">
+      <a href="#firstPage">▲</a>
+    </li>
+    <li data-menuanchor="lastPage" class="main">
+      <a href="./TeamMain.html">메인</a>
+    </li>    
+  </ul>
+  <div id="fullpage">
+    <div class="section active" id="section0">
+      <div class="slide">
+        <section>
+          <video id="video" data-autoplay muted loop preload="auto" width="100%" height="100%">
+            <source src="./img/도서관영상.mp4" type="video/mp4">
+          </video>
+          <div class="textbox">
+            <h1 style="padding-bottom: 100px; padding-left: 50px;">중부대학교 교내탐방</h1>
+            <p style="padding-left: 50px;">
+              <span>코로나19</span>로 인해 제대로 된 학교생활을 경험해보지 못한 20, 21학번들을 비롯한 중부대학교 재학생분들에게 적은 내용이라도 정보를 드리고자 홈페이지를 만들었습니다.
+              그 중, 교내 휴게시설, 정보보호학과와 관련된 내용을 소개해드리겠습니다.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+
+
+    <!-- 교수님들 Card -->
+    <div class="section" id="section1">
+
+
+      <div class="gallerylist">
+        <ul>
+
+          <li>
+            <a href="#">
+              <div class="screen col-sm">
+                <div class="top">세종관 C6-806</div>
+                <div class="bottom">
+                  <hr>
+                  031) 8075 - 1652
+                  <br>
+                  jmyang@joongbu.ac.kr
+                </div>
+                <img src="./imgs_harin/yjm.png">
+              </div>
+              <div>
+                <h3>양정모 교수님</h3>
+              </div>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#">
+              <div class="screen col-sm">
+                <div class="top">세종관 C6-807</div>
+                <div class="bottom">
+                  <hr>
+                  031) 8075 - 1653
+                  <br>
+                  sjyoo@joongbu.ac.kr
+                </div>
+                <img src="./imgs_harin/ysj.png">
+              </div>
+              <div>
+                <h3>유승재 교수님</h3>
+              </div>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#">
+              <div class="screen col-sm">
+                <div class="top">세종관 C6-808</div>
+                <div class="bottom">
+                  <hr>
+                  031) 8075 - 1654
+                  <br>
+                  sultan@joongbu.ac.kr
+                </div>
+                <img src="./imgs_harin/lbc.png">
+              </div>
+              <div>
+                <h3>이병천 교수님</h3>
+              </div>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#">
+              <div class="screen col-sm">
+                <div class="top">세종관 C6-315</div>
+                <div class="bottom">
+                  <hr>
+                  031) 8075 - 1228
+                  <br>
+                  Pax : 031-8075-1233
+                </div>
+                <img src="./imgs_harin/logo.png">
+              </div>
+              <div>
+                <h3>소프트웨어학부 조교</h3>
+              </div>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+      <div class="gallerylist">
+        <ul>
+
+
+          <li>
+            <a href="#">
+              <div class="screen col-sm">
+                <div class="top">세종관 C6-809</div>
+                <div class="bottom">
+                  <hr>
+                  031) 8075 - 1655
+                  <br>
+                  jmyang@joongbu.ac.kr
+                </div>
+                <img src="./imgs_harin/yhs.png">
+              </div>
+              <div>
+                <h3>양환석 교수님</h3>
+              </div>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#">
+              <div class="screen col-sm">
+                <div class="top">세종관 C6-810</div>
+                <div class="bottom">
+                  <hr>
+                  031) 8075 - 1659
+                  <br>
+                  skkim@joongbu.ac.kr
+                </div>
+                <img src="./imgs_harin/ksk.png">
+              </div>
+              <div>
+                <h3>김성규 교수님</h3>
+              </div>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#">
+              <div class="screen col-sm">
+                <div class="top">세종관 C6-811</div>
+                <div class="bottom">
+                  <hr>
+                  031) 8075 - 1641
+                  <br>
+                  mskim@joongbu.ac.kr
+                </div>
+                <img src="./imgs_harin/kms.png">
+              </div>
+              <div>
+                <h3>김민수 교수님</h3>
+              </div>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#">
+              <div class="screen col-sm">
+                <div class="top">세종관 C6-805</div>
+                <div class="bottom">
+                  <hr>
+                  031) 8075 - 1523
+                  <br>
+                  학과사무실(근로생)
+                </div>
+                <img src="./imgs_harin/logo.png">
+              </div>
+              <div>
+                <h3>정보보호 학과사무실</h3>
+              </div>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+
+
+    </div>
+
+    <!-- 실습실 이미지 영상 -->
+    <div class="section" id="section2">
+
+      <section>
+        <video id="slider" autoplay muted loop>
+          <source src="./imgs_harin/812.mp4" type="video/mp4">
+        </video>
+        <ul class="navigation0">
+          <li onclick="videoUrl('./imgs_harin/812.mp4')"><img src="./imgs_harin/812.png"></li>
+          <li onclick="videoUrl('./imgs_harin/815.mp4')"><img src="./imgs_harin/815.png"></li>
+          <li onclick="videoUrl('./imgs_harin/831.mp4')"><img src="./imgs_harin/831.png"></li>
+          <li onclick="videoUrl('./imgs_harin/832.mp4')"><img src="./imgs_harin/832.png"></li>
+        </ul>
+      </section>
+      <script type="text/javascript">
+        function videoUrl(harin) {
+          document.getElementById("slider").src = harin;
+        }
+      </script>
+    </div>
+
+    <div class="section" id="section3">
+      <!-- 테이블, 도서관, 카페 -->
+      <section>
+        <div class="circle"></div>
+        <div class="content_st">
+          <div class="textBox_st">
+            <h2>아래에서 보여드릴 사진은
+              <br>중부대학교 고양캠퍼스,<br> <span>휴게장소</span>입니다.</h2>
+            <br>
+            <hr><br>
+            <p>도서관, 카페, 테이블, 편의점 등 <br>다양한 휴게시설이 구비되어있습니다.</p>
+
+          </div>
+          <div class="imgBox_st">
+            <img src="./imgs_harin/table.png" class="starbucks">
+          </div>
+        </div>
+        <ul class="thumb">
+          <li><img src="./imgs_harin/table.png" onclick="imgSlider('./imgs_harin/table.png'); changeCircleColor('#017143')"></li>
+          <li><img src="./imgs_harin/coffee.png" onclick="imgSlider('./imgs_harin/coffee.png'); changeCircleColor('#eb7495')"></li>
+          <li><img src="./imgs_harin/library.png" onclick="imgSlider('./imgs_harin/library.png'); changeCircleColor('#d752b1')">
+          </li>
+          <li><img src="./imgs_harin/emart.png" onclick="imgSlider('./imgs_harin/emart.png'); changeCircleColor('#264852')"></li>
+        </ul>
+
+        <ul class="sci">
+          <li><a href="https://www.joongbu.ac.kr/"><img src="https://img.icons8.com/metro/26/000000/home.png" /></a>
+          </li>
+          <li><a href="https://ko-kr.facebook.com/joongbuuniversity/"><img
+                src="https://img.icons8.com/android/24/000000/facebook-new.png" /></a></li>
+          <li><a href="https://www.instagram.com/joongbuuniv/?hl=ko"><img
+                src="https://img.icons8.com/ios-glyphs/30/000000/instagram-circle.png" /></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="section" id="section4">
+      
+      <div class="slide" id="slide1_h">
+        <div class="space">
+          <h1>도서관1</h1>
+          <hr>
+          <p>세종관 1층</p>
+        </div>
+      </div>
+      <div class="slide" id="slide2_h">
+        <div class="space">
+          <h1>도서관 앞 열람실1</h1>
+          <hr>
+          <p>세종관2층</p>
+        </div>
+      </div>
+      <div class="slide" id="slide3_h">
+        <div class="space">
+          <h1>도서관 앞 열람실2</h1>
+          <hr>
+          <p>세종관2층</p>
+        </div>
+      </div>
+      <div class="slide" id="slide4_h">
+        <div class="space">
+          <h1>운동장</h1>
+          <hr>
+          <p>야외</p>
+        </div>
+      </div>
+      <div class="slide" id="slide5_h">
+        <div class="space">
+          <h1>인농관 카페1</h1>
+          <hr>
+          <p>인농관 4층</p>
+        </div>
+      </div>
+      <div class="slide" id="slide6_h">
+        <div class="space">
+          <h1>인농관 카페2</h1>
+          <hr>
+          <p>인농관 4층</p>
+        </div>
+      </div>
+      <div class="slide" id="slide7_h">
+        <div class="space">
+          <h1>체력단련실 앞 테이블1</h1>
+          <hr>
+          <p>세종관 4층</p>
+        </div>
+      </div>
+      <div class="slide" id="slide8_h">
+        <div class="space">
+          <h1>체력단련실 앞 테이블2</h1>
+          <hr>
+          <p>세종관 4층</p>
+        </div>
+      </div>
+      <div class="slide" id="slide9_h">
+        <div class="space">
+          <h1>학부행정실 앞 테이블1</h1>
+          <hr>
+          <p>세종관 3층</p>
+        </div>
+      </div>
+      <div class="slide" id="slide10_h">
+        <div class="space">
+          <h1>학부행정실 앞 테이블2</h1>
+          <hr>
+          <p>세종관 3층</p>
+        </div>
+      </div>
+      <div class="slide" id="slide11_h">
+        <div class="space">
+          <h1>세종관 편의점&커피킹</h1>
+          <hr>
+          <p>세종관 3층 | 현재 코로나로 인해 임시폐점</p>
+        </div>
+      </div>
+      <div class="slide" id="slide12_h">
+        <div class="space">
+          <h1>세종관 편의점 앞 테이블</h1>
+          <hr>
+          <p>세종관 3층</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <script type="text/javascript">
+    function imgSlider(anything) {
+      document.querySelector('.starbucks').src = anything;
+    }
+
+    function changeCircleColor(color) {
+      const circle = document.querySelector('.circle');
+      circle.style.background = color;
+    }
+
+  </script>
+</body>
+
+</html>

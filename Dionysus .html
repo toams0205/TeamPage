@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fullPage.js A simple Demo</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="./css/Dionysus.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="./js/scrolloverflow.js"></script>
+
+	<script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+			});
+		});
+	</script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=831e6e795616ecc8923c556ef831e890"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
+	<script src="./js/filter.js"></script>
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+		@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
+		@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Nanum+Brush+Script&display=swap');
+
+		@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
+		</style>
+
+</head>
+<body>
+
+	<div id="fullpage">
+	<div class="section active" id="section0"><!--첫장 start-->
+		<div id="slider"> <!--slide start-->
+			<section>
+				<video id="video" data-autoplay muted loop preload="auto" width="100%" height="100%">
+					<source src="./video/main.mp4" type="video/mp4">
+				</video>
+				<div class="textbox">
+					<h1 style="padding-bottom: 100px; padding-left: 50px; color: rgb(20, 0, 39); font-family: 'Gugi', cursive;"><strong>Dionysus </strong></h1>
+					<p style="padding-left: 50px; font-family: 'Gugi', cursive;">
+						<strong>학업으로 지친</strong>여러분을 위해 <strong>놀거리,먹거리를 준비했습니다 </strong><br>
+					</p>
+				</div>
+			</section>
+		
+      </div>
+    </div><!--slide end-->
+
+
+	    <div class="section" id="section1">
+				<div class="slide active" style="background: url(./img/f\ jroad.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;">
+					<div style="font-size: 130px; color: rgb(175, 140, 255); font-family: 'Gugi', cursive;"><strong> 음식점 소개	</strong> </div>
+				</div>
+		
+					<!--2-2 start-->
+					<!-- card Grid start -->
+				<!--2-2 start-->
+		<!-- card Grid start -->
+		<div class="slide" style="background: url(../img/food.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;">
+			<div class="foodcard">
+				<div class="main">
+					<h1 strong style="font-size: 42px; color: rgb(43, 0, 51); font-family: 'Gugi', cursive;"><strong>음식점</strong></h1>
+							<hr>
+							<div id="filterbtn"> <!-- cardfilter Grid start -->
+								<button class="Fbtn active" onclick="filterSelection('all')"> Show all</button>
+								<button class="Fbtn" onclick="filterSelection('pran')"> 프렌차이즈</button>
+								<button class="Fbtn" onclick="filterSelection('kor')"> 한식</button>
+								<button class="Fbtn" onclick="filterSelection('us')"> 양식</button>
+								<button class="Fbtn" onclick="filterSelection('other')"> 기타</button>
+							</div>
+					
+						<!-- card Grid start -->
+						<div class="row">
+					
+							<div class="column kor">
+								<div class="content">
+									<img src="./img/beefsum.jpg" alt="한식" style="width:100%" id="sumpic1" >						
+									<p>한우존</p>
+								</div>
+							</div>
+							<div id="mapmodal" class="mapmodalback">
+								<div class="modal-map2">
+									<div id="map"> </div>
+									<div class="close">&times;</div>
+								</div>
+							</div>
+					
+					
+							<div class="column other">
+								<div class="content">
+									<img src="./img/chinasum.jpg" alt="기타" style="width:100%" id="sumpic2" >
+									<p>오장원</p>
+								</div>
+							</div>
+		
+							
+							<div class="column us">
+								<div class="content">
+									<img src="./img/donsum.jpg" alt="양식" style="width:100%" id="sumpic3">
+								
+									<p>돈까스 극장</p>
+								</div>
+							</div>
+						
+							<div class="column pran">
+								<div class="content">
+										<img src="./img/goobnesum.jpg" alt="프렌차이즈" style="width:100%" id="sumpic4">
+										
+										<p>굽네치킨</p>
+								</div>
+							</div>
+									
+							<div class="column other">
+								<div class="content">
+									<img src="./img/joksum.jpg" alt="기타" style="width:100%" id="sumpic5">
+
+									<p>족발 신도시</p>
+								</div>
+							</div>
+
+								
+							<div class="column kor">
+								<div class="content">
+									<img src="./img/kalsum.jpg" alt="한식" style="width:100%" id="sumpic6">
+									
+									<p>서해안 칼국수</p>
+								</div>
+							</div>
+				
+								
+							<div class="column pran">
+								<div class="content">
+									<img src="./img/shinjunsum.jpg" alt="프렌차이즈" style="width:100%" id="sumpic7">
+								
+									<p>신전떡볶이</p>
+								</div>
+							</div>
+		
+								
+							<div class="column pran">
+								<div class="content">
+									<img src="./img/yupsum.jpg" alt="프렌차이즈" style="width:100%" id="sumpic8">
+								
+									<p>엽기떡볶이</p>
+								</div>
+							</div>
+					
+					
+							<div class="column pran">
+								<div class="content">
+									<img src="./img/kimsum.jpg" alt="프렌차이즈" style="width:100%" id="sumpic9">
+									
+									<p>김가네</p>
+								</div>
+							</div>
+		
+								
+							<div class="column kor">
+								<div class="content">
+									<img src="./img/samsum.jpg" alt="한식" style="width:100%"  id="sumpic10">
+								
+									<p>솥뚜껑 삼겹살</p>
+								</div>
+							</div>
+					
+								
+							<div class="column us">
+								<div class="content">
+									<img src="./img/pastasum.jpg" alt="양식" style="width:100%"  id="sumpic11">
+								
+									<p>필립테이블</p>
+								</div>
+							</div>
+				
+					
+							<div class="column kor">
+								<div class="content">
+									<img src="./img/sunsum.jpg" alt="한식" style="width:100%" id="sumpic12">
+								
+									<p>고향옥 순대국</p>
+								</div>
+							</div>	
+		
+					
+					
+					
+						</div><!-- card Grid end -->
+				</div><!-- cardfliter Grid end -->
+					
+					
+					<!-- modal start -->
+					<div id="modalpic1" class="modal">
+					<span class="close1">&times;</span>
+					<img class="modal-pic" src="./img/beef.jpg" >
+					<div id="picinfo1"></div>
+					</div>
+					
+					<div id="modalpic2" class="modal">
+					<span class="close2">&times;</span>
+					<img class="modal-pic" src="./img/china.jpg">
+					<div id="picinfo2"></div>
+					</div>
+					
+					<div id="modalpic3" class="modal">
+					<span class="close3">&times;</span>
+					<img class="modal-pic" src="./img/don.jpg" >
+					<div id="picinfo3"></div>
+					</div>
+					
+					<div id="modalpic4" class="modal">
+					<span class="close4 ">&times;</span>
+					<img class="modal-pic" src="./img/goobne.jpg">
+					<div id="picinfo4"></div>
+					</div>
+					
+					<div id="modalpic5" class="modal">
+					<span class="close5">&times;</span>
+					<img class="modal-pic" src="./img/jok.jpg" >
+					<div id="picinfo5"></div>
+					</div>
+					
+					<div id="modalpic6" class="modal">
+					<span class="close6">&times;</span>
+					<img class="modal-pic" src="./img/kal.jpg">
+					<div id="picinfo6"></div>
+					</div>
+					
+					<div id="modalpic7" class="modal">
+					<span class="close7">&times;</span>
+					<img class="modal-pic" src="./img/shinjun.jpg" >
+					<div id="picinfo7"></div>
+					</div>
+					
+					<div id="modalpic8" class="modal">
+					<span class="close8">&times;</span>
+					<img class="modal-pic" src="./img/yup.jpg" >
+					<div id="picinfo8"></div>
+					</div>
+					
+					
+					<div id="modalpic9" class="modal">
+					<span class="close9">&times;</span>
+					<img class="modal-pic" src="./img/kim.jpg">
+					<div id="picinfo9"></div>
+					</div>
+					
+					<div id="modalpic10" class="modal">
+					<span class="close10">&times;</span>
+					<img class="modal-pic" src="./img/sam.jpg">
+					<div id="picinfo10"></div>
+					</div>
+					
+					<div id="modalpic11" class="modal">
+						<span class="close11">&times;</span>
+						<img class="modal-pic" src="./img/pasta.jpg">
+						<div id="picinfo11"></div>
+					</div>
+					
+					<div id="modalpic12" class="modal">
+						<span class="close12">&times;</span>
+						<img class="modal-pic" src="./img/sunsum.jpg">
+						<div id="picinfo12"></div>
+					</div>
+					
+					<!-- madal end-->
+			</div>
+					<!-- hobby contents end-->
+		</div>
+					<!--2-2End-->
+	    <div class="slide" style="background: url(../img/find.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;">
+				<ul class="playplace">
+					<li class="mapplace"><div id="foodmap"></div></li>
+					<div class="placedevider" style="font-size: 30px; color: rgb(47, 25, 99); font-family:'Kirang Haerang', cursive;"><strong> 추천 하는 장소 ----- 화정역 부근</strong> </div>
+					<li class="place">	<div class="screen">
+						<div class="top" style="font-size: 40px; color: rgb(47, 25, 99); background-color: rgb(7, 0, 24); font-family:'Kirang Haerang', cursive;">화정역 부근</div>
+						<div class="bottom"  style="font-size: 30px; color: rgb(175, 140, 255); background-color: rgb(7, 0, 24); font-family:'Kirang Haerang', cursive;">
+							화정역 부근입니다. <br> 역 근처라 교통이 용이하고, 근처 먹자골목덕에 맛집이 많습니다.</div>
+						<img src="./img/hwa.jpg">	</div>			</li>
+				</ul>
+			</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="slide active" style="background: url(./img/banch.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;">
+			<div style="font-size: 130px; color: rgb(38, 0, 126);font-family: 'Gugi', cursive;"><strong> 카페 소개	</strong> </div>
+			<div class="backtesting">
+			</div>
+		</div>
+		<div class="slide" style="background: url(../img/cafe.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;">
+			<div class="row">
+				<div class="main">
+					<h1 strong style="font-size: 42px; color: rgb(43, 0, 51); font-family: 'Gugi', cursive; "><strong>카페</strong></h1>
+					<hr>
+					<div id="filterbtn"> <!-- cardfilter Grid start -->
+						<button class="Fbtn active" onclick="filterSelection('all')"> Show all</button>
+						<button class="Fbtn" onclick="filterSelection('pran')"> 프렌차이즈</button>
+						<button class="Fbtn" onclick="filterSelection('bake')"> 베이커리</button>
+						<button class="Fbtn" onclick="filterSelection('brunch')"> 브런치</button>
+						<button class="Fbtn" onclick="filterSelection('date')"> 데이트</button>
+					</div>
+			
+				<!-- card Grid start -->
+				<div class="row">
+			
+					
+
+					<div class="column bake">
+						<div class="content">
+							<img src="./img/297sum.jpg" alt="한식" style="width:100%" id="sumpic13" >
+						
+							<p>297크루아상카페</p>
+						</div>
+					</div>
+
+					<div id="newmapmodal" class="map_wrap">
+						<div class="mapmodalbase">
+							<span class="mapclose">&times;</span>
+							<div class="newmap" style="width: 800px;
+							height: 500px;
+							display: inline-flex;
+							align-content: center;"></div>
+						</div>
+					</div>
+	
+			
+					<div class="column date">
+						<div class="content">
+							<img src="./img/cornersum.jpg" alt="기타" style="width:100%" id="sumpic14" >
+							
+							<p>코너</p>
+						</div>
+					</div>
+
+					
+					<div class="column brunch">
+						<div class="content">
+							<img src="./img/angelsum.jpg" alt="양식" style="width:100%" id="sumpic15">
+						
+							<p>엔젤카페</p>
+						</div>
+					</div>
+
+				
+					<div class="column pran">
+						<div class="content">
+								<img src="./img/starbuckssum.jpg" alt="프렌차이즈" style="width:100%" id="sumpic16">
+								
+								<p>스타벅스</p>
+						</div>
+					</div>
+
+							
+					<div class="column bake">
+						<div class="content">
+							<img src="./img/matdolsum.jpg" alt="기타" style="width:100%" id="sumpic17">
+							
+							<p>멧돌</p>
+						</div>
+					</div>
+
+						
+					<div class="column pran">
+						<div class="content">
+							<img src="./img/aroisum.jpg" alt="한식" style="width:100%" id="sumpic18">
+						
+							<p>아로이커피</p>
+						</div>
+					</div>
+
+						
+					<div class="column brunch">
+						<div class="content">
+							<img src="./img/ausum.jpg" alt="프렌차이즈" style="width:100%" id="sumpic19">
+						
+							<p>에이유</p>
+						</div>
+					</div>
+
+						
+					<div class="column date">
+						<div class="content">
+							<img src="./img/dawissum.jpg" alt="프렌차이즈" style="width:100%" id="sumpic20">
+						
+							<p>다위스</p>
+						</div>
+					</div>
+	
+			
+					<div class="column pran">
+						<div class="content">
+							<img src="./img/eidyasum.jpg" alt="프렌차이즈" style="width:100%" id="sumpic21">
+						
+							<p>이디야커피</p>
+						</div>
+					</div>
+
+						
+					<div class="column bake">
+						<div class="content">
+							<img src="./img/gabedasum.jpg" alt="한식" style="width:100%"  id="sumpic22">
+							
+							<p>가베다커피</p>
+						</div>
+					</div>
+		
+						
+					<div class="column date">
+						<div class="content">
+							<img src="./img/sudasum.jpg" alt="양식" style="width:100%"  id="sumpic23">
+						
+							<p>카페 서다</p>
+						</div>
+					</div>
+
+			
+					<div class="column pran">
+						<div class="content">
+							<img src="./img/juicysum.jpg" alt="한식" style="width:100%" id="sumpic24">
+							
+							<p>쥬시</p>
+						</div>
+					</div>	
+	
+
+			
+			
+			
+				</div><!-- card Grid end -->
+		</div><!-- cardfliter Grid end -->
+			
+			
+			<!-- modal start -->
+		
+			<div id="modalpic13" class="modal2">
+			<span class="close13">&times;</span>
+			<img class="modal-pic" src="./img/297.jpg" >
+			<div id="picinfo1"></div>
+			</div>
+	
+			<div id="modalpic14" class="modal2">
+				<span class="close14">&times;</span>
+				<img class="modal-pic" src="./img/corner.jpg" >
+				<div id="picinfo2"></div>
+				</div>
+
+			<div id="modalpic15" class="modal2">
+			<span class="close15">&times;</span>
+			<img class="modal-pic" src="./img/angel.jpg" >
+			<div id="picinfo3"></div>
+			</div>
+			
+			<div id="modalpic16" class="modal2">
+			<span class="close16 ">&times;</span>
+			<img class="modal-pic" src="./img/starbucks.jpg">
+			<div id="picinfo4"></div>
+			</div>
+			
+			<div id="modalpic17" class="modal2">
+			<span class="close17">&times;</span>
+			<img class="modal-pic" src="./img/matdol.jpg" >
+			<div id="picinfo5"></div>
+			</div>
+			
+			<div id="modalpic18" class="modal2">
+			<span class="close18">&times;</span>
+			<img class="modal-pic" src="./img/aroi.jpg">
+			<div id="picinfo6"></div>
+			</div>
+			
+			<div id="modalpic19" class="modal2">
+			<span class="close19">&times;</span>
+			<img class="modal-pic" src="./img/au.jpg" >
+			<div id="picinfo7"></div>
+			</div>
+			
+			<div id="modalpic20" class="modal2">
+			<span class="close20">&times;</span>
+			<img class="modal-pic" src="./img/dawis.jpg" >
+			<div id="picinfo8"></div>
+			</div>
+			
+			
+			<div id="modalpic21" class="modal2">
+			<span class="close21">&times;</span>
+			<img class="modal-pic" src="./img/eidya.jpg">
+			<div id="picinfo9"></div>
+			</div>
+			
+			<div id="modalpic22" class="modal2">
+			<span class="close22">&times;</span>
+			<img class="modal-pic" src="./img/gabeda.jpg">
+			<div id="picinfo10"></div>
+			</div>
+			
+			<div id="modalpic23" class="modal2">
+				<span class="close23">&times;</span>
+				<img class="modal-pic" src="./img/suda.jpg">
+				<div id="picinfo11"></div>
+			</div>
+			
+			<div id="modalpic24" class="modal2">
+				<span class="close24">&times;</span>
+				<img class="modal-pic" src="./img/juicy.jpg">
+				<div id="picinfo12"></div>
+			</div>
+			
+			<!-- madal end-->
+	</div>
+			<!-- hobby contents end-->
+</div>
+			<!--2-2End-->
+		  <div class="slide" style="background: url(../img/find.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;">
+				<ul class="playplace">
+					<li class="mapplace"><div id="cafemap"></div></li>
+					<div class="placedevider" style="font-size: 30px; color: rgb(47, 25, 99); font-family:'Kirang Haerang', cursive;"><strong> 추천 하는 장소 ----- 스타필드</strong> </div>
+					<li class="place">	<div class="screen">
+						<div class="top" style="font-size: 40px; color: rgb(47, 25, 99); background-color: rgb(7, 0, 24); font-family:'Kirang Haerang', cursive;">고양 스타필드</div>
+						<div class="bottom"  style="font-size: 30px; color: rgb(175, 140, 255); background-color: rgb(7, 0, 24); font-family:'Kirang Haerang', cursive;">
+							종합 쇼핑몰입니다. <br> 쇼핑몰이라 주점보다는 쇼핑과 카페가 주를 이룹니다.</div>
+						<img src="./img/starfield.jpg">	</div>					</li>
+				</ul>
+			</div>
+		
+	</div>
+
+
+
+
+	<div class="section" id="section3">
+		<div class="slide active" style="background: url(./img/bulb.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;">
+			<div style="font-size: 130px; color: rgb(175, 140, 255);font-family: 'Gugi', cursive;"><strong> 즐길거리 소개	</strong>
+
+
+			<div class="slide"	style="background: url(../img/play.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;">		 <!-- 2-4 start -->
+				<div class="row">
+					<div class="main" >
+								<h1 strong style="font-size: 42px; color: rgb(43, 0, 51); font-family: 'Gugi', cursive;"><strong>놀거리</strong></h1>
+								<hr>
+								<div id="filterbtn"> <!-- cardfilter Grid start -->
+									<button class="Fbtn active" onclick="filterSelection('all')"> Show all</button>
+									<button class="Fbtn" onclick="filterSelection('sul')"> 술집</button>
+									<button class="Fbtn" onclick="filterSelection('no')"> 노래방</button>
+									<button class="Fbtn" onclick="filterSelection('pc')">PC방</button>
+									<button class="Fbtn" onclick="filterSelection('bill')"> 당구장</button>
+								</div>
+						
+							<!-- card Grid start -->
+				<div class="row">
+		
+				<div class="column sul">
+					<div class="content">
+						<img src="./img/halmesum.jpg" alt="역전할머니맥주" style="width:100%" id="sumpic25">
+					
+						<p>역전할머니맥주</p>
+					</div>
+				</div>
+		
+				<div class="column sul">
+					<div class="content">
+						<img src="./img/simsum.jpg" alt="심야식당" style="width:100%" id="sumpic26">
+					
+						<p>심야식당</p>
+					</div>
+				</div>
+		
+				<div class="column sul">
+					<div class="content">
+						<img src="./img/oaskasum.jpg" alt="오사카부루스" style="width:100%" id="sumpic27">
+						
+						<p>오사카부루스 </p>
+					</div>
+				</div>
+		
+				<div class="column sul">
+					<div class="content">
+						<img src="./img/sulgsum.jpg" alt="술그머니" style="width:100%" id="sumpic28">
+					
+						<p>술그머니</p>
+					</div>
+				</div>
+		
+				<div class="column sul">
+					<div class="content">
+						<img src="./img/bit sum.jpg" alt="빛나리포장마차" style="width:100%" id="sumpic29">
+					
+						<p>빛나리포장마차</p>
+					</div>
+				</div>
+		
+				<div class="column bill">
+					<div class="content">
+						<img src="./img/taesum.jpg" alt="태양당구장" style="width:100%" id="sumpic30">
+					
+						<p>태양당구장</p>
+					</div>
+				</div>
+		
+				<div class="column sul">
+					<div class="content">
+						<img src="./img/ojusum.jpg" alt="오쭈오쭈" style="width:100%" id="sumpic31">
+					
+						<p>오쭈오쭈</p>
+					</div>
+				</div>
+		
+				<div class="column sul">
+					<div class="content">
+						<img src="./img/gotchisum.jpg" alt="수제왕꼬치" style="width:100%" id="sumpic32">
+					
+						<p>수제왕꼬치</p>
+					</div>
+				</div>
+		
+				<div class="column pc">
+					<div class="content">
+						<img src="./img/starpcsum.jpg" alt="스타 PC방" style="width:100%" id="sumpic33">
+					
+						<p>스타 PC방</p>
+					</div>
+				</div>
+		
+				<div class="column no">
+					<div class="content">
+						<img src="./img/ltno.jpg" alt="엘티 노래방" style="width:100%" id="sumpic34">
+					
+						<p>엘티 노래방</p>
+					</div>
+				</div>
+		
+				<div class="column pc">
+					<div class="content">
+						<img src="./img/applepc.jpg" alt="애플 PC방" style="width:100%" id="sumpic35">
+					
+						<p>애플 PC방</p>
+					</div>
+				</div>
+		
+				<div class="column no">
+					<div class="content">
+						<img src="./img/psyno.jpg" alt="싸이노래방" style="width:100%" id="sumpic36">
+					
+						<p>싸이노래방</p>
+					</div>
+				</div>
+		
+				<div id="modalpic25" class="modal3">
+					<span class="close25">&times;</span>
+					<img class="modal-pic" src="./img/halme.jpg">
+					 <div id="picinfo25"></div>
+				</div>
+				
+				<div id="modalpic26" class="modal3">
+					<span class="close26">&times;</span>
+					<img class="modal-pic" src="./img/sim.jpg">
+					<div id="picinfo26"></div>
+				</div>
+				
+				<div id="modalpic27" class="modal3">
+					<span class="close27">&times;</span>
+					<img class="modal-pic" src="./img/osaka.jpg">
+					<div id="picinfo27"></div>
+				</div>
+				
+				<div id="modalpic28" class="modal3">
+					<span class="close28">&times;</span>
+					<img class="modal-pic" src="./img/sulg.jpg">
+					<div id="picinfo28"></div>
+				</div>  
+				
+				<div id="modalpic29" class="modal3">
+					<span class="close29">&times;</span>
+					<img class="modal-pic" src="./img/bit.jpg">
+					<div id="picinfo29"></div>
+				</div>
+				
+				<div id="modalpic30" class="modal3">
+					<span class="close30">&times;</span>
+					<img class="modal-pic" src="./img/tae.jpg">
+					<div id="picinfo30"></div>
+				</div>
+				
+				<div id="modalpic31" class="modal3">
+					<span class="close31">&times;</span>
+					<img class="modal-pic" src="./img/oju.jpg">
+					<div id="picinfo31"></div>
+				</div>
+				
+				<div id="modalpic32" class="modal3">
+					<span class="close32">&times;</span>
+					<img class="modal-pic" src="./img/gotchi.jpg">
+					<div id="picinfo32"></div>
+				</div>
+				
+				<div id="modalpic33" class="modal3">
+					<span class="close33">&times;</span>
+					<img class="modal-pic" src="./img/starpc.jpg">
+					<div id="picinfo33"></div>
+				</div>
+				
+				<div id="modalpic34" class="modal3">
+					<span class="close34">&times;</span>
+					<img class="modal-pic" src="./img/ltno.jpg">
+					<div id="picinfo34"></div>
+				</div>
+				
+				<div id="modalpic35" class="modal3">
+					<span class="close35">&times;</span>
+					<img class="modal-pic" src="./img/applepc.jpg">
+					<div id="picinfo35"></div>
+				</div>
+					
+				<div id="modalpic36" class="modal3">
+					<span class="close36">&times;</span>
+					<img class="modal-pic" src="./img/psyno.jpg">
+					<div id="picinfo36"></div>
+				</div>
+
+
+
+				<div class="slide" style="background: url(../img/find.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;">>
+					<ul class="playplace">
+						<li class="mapplace"><div id="lafemap"></div></li>
+						<div class="placedevider" style="font-size: 30px; color: rgb(47, 25, 99); font-family:'Kirang Haerang', cursive;"><strong> 추천 하는 장소------라페스타</strong> </div>
+					<li class="place"> 
+						<div class="screen">
+							<div class="top" style="font-size: 40px; color: rgb(47, 25, 99); background-color: rgb(7, 0, 24); font-family:'Kirang Haerang', cursive;">라페스타</div>
+            	<div class="bottom"  style="font-size: 30px; color: rgb(175, 140, 255); background-color: rgb(7, 0, 24); font-family:'Kirang Haerang', cursive;">
+								일산의 홍대라 불리는 곳입니다. <br> 술집과 각종 액티비티, 쇼핑 시설이 밀집해있습니다.</div>
+							<img src="./img/lafe.jpg">	</div>		
+					</li>
+				</ul>
+			</div>
+
+
+	</div>
+
+
+	</div>
+	</div>
+	</div>
+	</div>
+
+
+</div>
+
+
+<script src="./js/placemap1.js"></script>
+<script src="./js/placemap2.js"></script>
+<script src="./js/placemap3.js"></script>
+<script src="./js/mainslide.js"></script>
+<script src="../js/mod1.js"></script>
+<script src="../js/mod2.js"></script>
+<script src="../js/mod3.js"></script>
+<script src="../js/mod4.js"></script>
+<script src="../js/mod5.js"></script>
+<script src="../js/mod6.js"></script>
+<script src="../js/mod7.js"></script>
+<script src="../js/mod8.js"></script>
+<script src="../js/mod9.js"></script>
+<script src="../js/mod10.js"></script>
+<script src="../js/mod11.js"></script>
+<script src="../js/mod12.js"></script>
+<script src="../js/mod13.js"></script>
+<script src="../js/mod14.js"></script>
+<script src="../js/mod15.js"></script>
+<script src="../js/mod16.js"></script>
+<script src="../js/mod17.js"></script>
+<script src="../js/mod18.js"></script>
+<script src="../js/mod19.js"></script>
+<script src="../js/mod20.js"></script>
+<script src="../js/mod21.js"></script>
+<script src="../js/mod22.js"></script>
+<script src="../js/mod23.js"></script>
+<script src="../js/mod24.js"></script>
+<script src="../js/mod25.js"></script>
+<script src="../js/mod26.js"></script>
+<script src="../js/mod27.js"></script>
+<script src="../js/mod28.js"></script>
+<script src="../js/mod29.js"></script>
+<script src="../js/mod30.js"></script>
+<script src="../js/mod31.js"></script>
+<script src="../js/mod32.js"></script>
+<script src="../js/mod33.js"></script>
+<script src="../js/mod34.js"></script>
+<script src="../js/mod35.js"></script>
+<script src="../js/mod36.js"></script>
+
+</body>
+</html>

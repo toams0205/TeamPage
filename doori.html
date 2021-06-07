@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>모두의 중부</title>
+	<link href="./img/모두의 중부 아이콘.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords" content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="./css/doori.css" />
+	<link rel="stylesheet" type="text/css" href="./css/button1.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="../vendors/scrolloverflow.js"></script>
+
+	<script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#9c1c2b', 'rgb(2, 77, 150);', '#000000', '#000000'],
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+	<div id="footer">
+		copyright by fullpage.js
+	</div>
+	<ul id="menu">
+		<li data-menuanchor="firstPage"><a href="#firstPage">홈</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">청년혜택</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">사이트</a></li>
+		<li data-menuanchor="4thpage"><a href="#4thpage">복지센터</a></li>
+		<li data-menuanchor="lastPage"><a href="./TeamMain.html">메인</a></li>
+	</ul>
+	<div id="fullpage">
+		<div class="section active" id="section0">
+			<section>
+				<video id="video" data-autoplay muted loop preload="auto" width="100%" height="100%">
+					<source src="./doorimg/Office.mp4" type="video/mp4">
+				</video>
+				<div class="textbox">
+					<h1 style="padding-bottom:100px; padding-left: 50px; text-align: left; color:#9c1c2d ;"> <strong>대학생활
+							정보모음</strong>
+					</h1>
+					<p style="padding-left: 50px; padding-bottom: 50px; color: #f7f3e9;">
+						<strong>국가나 지자체 차원에서 실행하고있는 <br>
+							청년복지정책을 모아 보았습니다.</strong>
+					</p>
+				</div>
+			</section>
+		</div>
+
+		<div class="section" id="section1">
+			<div class="slide active">
+				<section>
+					<video id="video" data-autoplay muted loop preload="auto" width="100%" height="100%">
+						<source src="./doorimg/Student.mp4" type="video/mp4">
+					</video>
+					<div class="textbox">
+						<h1 style="padding-bottom: 100px; padding-left: 100px; color: azure;"><strong>청년복지</strong></h1>
+						<p style="padding-left: 100px;">
+							청년들이 받을수있는 <br> 놀라운 혜택들!
+						</p>
+					</div>
+				</section>
+			</div>
+			<div class="slide">
+				<h1>경기도 청소년 교통비지원</h1> <br>
+				<section>
+					<img src="./doorimg/bus.png" alt="경기도교통비지원사업" style="display: block; float:left;  margin-right: 20px;">
+					<a href="https://www.gbuspb.kr/user/svc/userServiceInfoView.do" class="btn7" target="_blank">
+						<p>자세히 알아보기</p>
+					</a>
+			</div>
+			<div class="slide">
+				<h1>청년우대주택청약</h1> <br>
+				<section>
+					<img src="./doorimg/homeless.png" alt="청년우대주택청약" style="display: block; position: relative; left: 650px; max-width:100%; height:auto;
+					">
+					<a href="https://www.gov.kr/portal/service/serviceInfo/161300000088" class="btn7" target="_blank">
+						<p>자세히 알아보기</p>
+					</a>
+			</div>
+			<div class="slide">
+				<h1>청년인생설계학교(서울)</h1> <br>
+				<section>
+					<img src="./doorimg/schoolseoul.png" alt="청년인생설계학교"
+						style="display: block; position: relative; left: 600px; max-width:100%; height:auto;">
+					<a href="https://youth.seoul.go.kr/site/main/board/notice/23850?baCategory1=life_design&amp;baCategory2=&amp;baCategory3=&gclid=Cj0KCQjw5PGFBhC2ARIsAIFIMNcQfS4n8z_HyKRXk5EKWXpbxwjClihtfjc7Xk1l9ccLKcQNllOzt9oaAuzwEALw_wcB"
+						class="btn7" target="_blank">
+						<p>자세히 알아보기</p>
+					</a>
+			</div>
+			<div class="slide">
+				<h1>고양청년 희망나래</h1> <br>
+				<section>
+					<img src="./doorimg/hope.png" alt="고양청년 희망나래" style="display: block; position: relative; left: 620px; max-width:100%; height:auto;
+					">
+					<a href="http://www.goyang.go.kr/jobs/jobs03/jobs03_1/jobs03_1_5.jsp" class="btn7" target="_blank">
+						<p>자세히 알아보기</p>
+					</a>
+			</div>
+		</div>
+
+		<div class="section" id="section2">
+			<div class="slide active">
+				<section>
+					<video id="video" data-autoplay muted loop preload="auto" width="100%" height="100%">
+						<source src="./doorimg/certificate.mp4" type="video/mp4">
+					</video>
+					<div class="textbox">
+						<h1 style="padding-bottom: 100px; padding-left: 100px; color: azure;"><strong>유용한 사이트</strong></h1>
+						<p style="padding-left: 100px;">
+							모르면 손해인 사이트들을 알려드려요!
+						</p>
+					</div>
+				</section>
+			</div>
+			<div class="slide">
+				<h1>유용한 사이트</h1> <br>
+				<section>
+					<div class="swiper-container mySwiper" style="background-color: #FFF; width: 900px;">
+						<div class="swiper-wrapper">
+
+							<div class="swiper-slide">
+								<img src="./doorimg/riss.png" alt="riss" style="width: 500px; height: 500px; align-content: center;">
+								<p>RISS: <br> 각종논문과 학습자료들을 볼수있는 레포트 작성시 유용한 사이트 <br> <a href="http://www.riss.kr/index.do" class="btn2"
+										target="_blank">바로가기</a></p>
+							</div>
+
+							<div class="swiper-slide">
+								<img src="./doorimg/everytime.png" alt="everytime"
+									style="width: 500px; height: 500px; align-content: center;">
+								<p>에브리타임: <br> 대학생활의 필수 <br> 커뮤니티 어플,사이트 <br> <a href="https://everytime.kr/" class="btn2"
+										target="_blank">바로가기</a>
+								</p>
+							</div>
+
+							<div class="swiper-slide">
+								<img src="./doorimg/pixabay.png" alt="pixabay"
+									style="width: 500px; height: 500px; align-content: center;">
+								<p>Pixabay: <br> 저작권 없는 무료 이미지/ GIF사이트 <br> <a href="https://pixabay.com/ko/" class="btn2"
+										target="_blank">바로가기</a>
+								</p>
+							</div>
+
+							<div class="swiper-slide">
+								<img src="./doorimg/colorhunt.png" alt="colorhunt"
+									style="width: 500px; height: 500px; align-content: center;">
+								<p>Color Hunt: <br> 색 조합을 추천해주는 <br> 유용한 사이트 <br><a href="https://colorhunt.co/" class="btn2"
+										target="_blank">바로가기</a>
+								</p>
+							</div>
+
+							<div class="swiper-slide">
+								<img src="./doorimg/comcbt.png" alt="자격증, 공부"
+									style="width: 500px; height: 500px; align-content: center;">
+								<p>comcbt: <br> 허름해보이지만 각종 <br> 자격증과 공무원관련 <br> 자료가 모여있는 <br> 유서깊은 사이트 <br> <a
+										href="https://www.comcbt.com/" class="btn2" target="_blank">바로가기</a>
+								</p>
+							</div>
+
+							<div class="swiper-slide">
+								<img src="./doorimg/noonnu.png" alt="눈누" style="width: 500px; height: 500px; align-content: center;">
+								<p>눈누 : <br> 여러가지 <br> 폰트집합소!
+									<br> <a href="https://noonnu.cc/" class="btn2" target="_blank">바로가기</a>
+								</p>
+							</div>
+
+
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<div class="section" id="section3">
+			<div class="slide active">
+				<section>
+					<video id="video" data-autoplay muted loop preload="auto" width="100%" height="100%">
+						<source src="./doorimg/job.mp4" type="video/mp4">
+					</video>
+					<div class="textbox">
+						<h1 style="padding-bottom: 100px; padding-left: 100px; color: azure;"><strong>고용복지센터</strong></h1>
+						<p style="padding-left: 100px;">
+							고양시에 위치한 <br> 고용복지센터에 다녀왔습니다!
+						</p>
+					</div>
+				</section>
+			</div>
+			<div class="slide">
+				<h1>사진모음</h1> <br>
+				<section>
+
+					<div class="swiper-container mySwiper" style="background-color: #FFF; width: 900px;">
+						<div class="swiper-wrapper">
+
+							<div class="swiper-slide"><img src="./doorimg/wholefloor2.jpg" alt="전체층"
+									style="width: 600px; height: 600px; align-content: center; max-width:100%; height:auto;"></div>
+
+							<div class="swiper-slide"><img src="./doorimg/job1.jpg" alt="전체층"
+									style="width: 600px; height: 600px; align-content: center; max-width:100%; height:auto;"></div>
+
+							<div class="swiper-slide"><img src="./doorimg/job2.jpg" alt="전체층"
+									style="width: 600px; height: 600px; align-content: center; max-width:100%; height:auto;"></div>
+
+							<div class="swiper-slide"><img src="./doorimg/job4.jpg" alt="전체층"
+									style="width: 600px; height: 600px; align-content: center; max-width:100%; height:auto;"></div>
+
+							<div class="swiper-slide"><img src="./doorimg/job6.jpg" alt="전체층"
+									style="width: 600px; height: 600px; align-content: center; max-width:100%; height:auto;"></div>
+
+							<div class="swiper-slide"><img src="./doorimg/job8.jpg" alt="전체층"
+									style="width: 600px; height: 600px; align-content: center; max-width:100%; height:auto;"></div>
+
+							<div class="swiper-slide"><img src="./doorimg/job9.jpg" alt="전체층"
+									style="width: 600px; height: 600px; align-content: center; max-width:100%; height:auto;"></div>
+
+							<div class="swiper-slide"><img src="./doorimg/jobcenter6.jpg" alt="전체층"
+									style="width: 600px; height: 600px; align-content: center; max-width:100%; height:auto;"></div>
+
+							<div class="swiper-slide"><img src="./doorimg/job3.jpg" alt="전체층"
+									style="width: 600px; height: 600px; align-content: center; max-width:100%; height:auto;"></div>
+
+
+
+
+
+
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+
+			</div>
+
+
+
+			<!-- Swiper JS -->
+			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+			<!-- Initialize Swiper -->
+			<script>
+				var swiper = new Swiper(".mySwiper", {
+					pagination: {
+						el: ".swiper-pagination",
+						type: "progressbar",
+					},
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+				});
+			</script>
+
+</body>
+
+</html>
